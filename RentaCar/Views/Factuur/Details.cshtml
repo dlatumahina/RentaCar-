@@ -1,0 +1,50 @@
+﻿@model RentaCar.Models.factuur
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>factuur</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.datum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.datum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.factuurtotaal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.factuurtotaal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.klant.voorletters)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.klant.voorletters)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.medewerker.voorletters)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.medewerker.voorletters)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.factuurnummer }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,56 @@
+﻿@model RentaCar.Models.factuur
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>factuur</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.datum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.datum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.factuurtotaal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.factuurtotaal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.klant.voorletters)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.klant.voorletters)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.medewerker.voorletters)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.medewerker.voorletters)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
