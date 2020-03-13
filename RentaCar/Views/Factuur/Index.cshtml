@@ -4,48 +4,62 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<br />
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<center><h2>Factuur</h2></center>
+
+<br />
+
+
+	<p>
+		@Html.ActionLink("Aanmaken", "Create")
+	</p>
+
+<br />
+
 <table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.datum)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.factuurtotaal)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.klant.voorletters)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.medewerker.voorletters)
-        </th>
-        <th></th>
-    </tr>
+	<tr>
+		<th>
+			Factuur ID
+		</th>
+		<th>
+			Voornaam
+		</th>
+		<th>
+			Achternaam
+		</th>
+		<th>
+			Auto
+		</th>
+		<th>
+			Begin Datum
+		</th>
+		<th>
+			Eind Datum 
+		</th>
+		<th></th>
+	</tr>
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.datum)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.factuurtotaal)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.klant.voorletters)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.medewerker.voorletters)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.factuurnummer }) |
-            @Html.ActionLink("Details", "Details", new { id=item.factuurnummer }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.factuurnummer })
-        </td>
-    </tr>
+	<tr>
+		<td>
+			@Html.DisplayFor(modelItem => item.factuurnummer)
+		</td>
+		<td>
+			@Html.DisplayFor(modelItem => item.klant.voorletters)
+		</td>
+		<td>
+			@Html.DisplayFor(modelItem => item.factuurtotaal)
+		</td>
+		<td>
+			@Html.DisplayFor(modelItem => item.medewerker.voorletters)
+		</td>
+		<td>
+			@Html.ActionLink("Edit", "Edit", new { id = item.factuurnummer }) |
+			@Html.ActionLink("Details", "Details", new { id = item.factuurnummer }) |
+			@Html.ActionLink("Delete", "Delete", new { id = item.factuurnummer })
+		</td>
+	</tr>
 }
 
 </table>
