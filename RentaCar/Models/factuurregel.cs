@@ -16,7 +16,8 @@ namespace RentaCar.Models
     {
         public string factuurnummer { get; set; }
         public string kenteken { get; set; }
-        public System.DateTime begindatum { get; set; }
+		public string merk { get; set; }
+		public System.DateTime begindatum { get; set; }
         public System.DateTime einddatum { get; set; }
         public Nullable<decimal> dagprijs { get; set; }
         public Nullable<decimal> totaal { get; set; }

@@ -14,7 +14,10 @@ namespace RentaCar.Models
     
     public partial class factuur
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+		internal object klant;
+		internal object medewerker;
+
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public factuur()
         {
             this.factuurregel = new HashSet<factuurregel>();
@@ -26,8 +29,6 @@ namespace RentaCar.Models
         public Nullable<System.DateTime> datum { get; set; }
         public Nullable<decimal> factuurtotaal { get; set; }
     
-        public virtual klant klant { get; set; }
-        public virtual medewerker medewerker { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<factuurregel> factuurregel { get; set; }
     }

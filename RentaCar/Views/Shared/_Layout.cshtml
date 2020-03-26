@@ -23,12 +23,13 @@
 				<ul class="nav navbar-nav">
 					<li><a href="http://localhost:63100/Auto">Huren</a></li>
 					<li><a href="http://localhost:63100/Factuur">Factuur</a></li>
+					<li><a href="http://localhost:63100/FactuurRegel">FactuurRegel</a></li>
 					@if (User.IsInRole("Admin"))
-			{
-			<li><a href="http://localhost:57596/Categorie">Categorie</a></li>
-			<li><a href="http://localhost:57596/Overzicht">Overzicht</a></li>
-			<li><a href="http://localhost:57596/Admin">Accounts</a></li>
-			}
+	{
+				<li><a href="http://localhost:57596/Categorie">Categorie</a></li>
+				<li><a href="http://localhost:57596/Overzicht">Overzicht</a></li>
+				<li><a href="http://localhost:57596/Admin">Accounts</a></li>
+}
 				</ul>
 				@Html.Partial("_LoginPartial")
 			</div>

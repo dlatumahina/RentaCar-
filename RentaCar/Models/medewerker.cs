@@ -17,7 +17,6 @@ namespace RentaCar.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public medewerker()
         {
-            this.factuur = new HashSet<factuur>();
             this.klant = new HashSet<klant>();
         }
     
@@ -29,8 +28,6 @@ namespace RentaCar.Models
         public string wachtwoord { get; set; }
         public string naam { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<factuur> factuur { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<klant> klant { get; set; }
     }

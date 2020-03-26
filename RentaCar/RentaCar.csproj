@@ -178,6 +178,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AutoController.cs" />
     <Compile Include="Controllers\FactuurController.cs" />
+    <Compile Include="Controllers\FactuurRegelController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -200,9 +201,6 @@
       <DependentUpon>RentaCar.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\C__MigrationHistory.cs">
-      <DependentUpon>RentaCar.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\database_firewall_rules.cs">
       <DependentUpon>RentaCar.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\factuur.cs">
@@ -323,6 +321,11 @@
     <Content Include="Views\Auto\Details.cshtml" />
     <Content Include="Views\Auto\Edit.cshtml" />
     <Content Include="Views\Auto\Index.cshtml" />
+    <Content Include="Views\FactuurRegel\Create.cshtml" />
+    <Content Include="Views\FactuurRegel\Delete.cshtml" />
+    <Content Include="Views\FactuurRegel\Details.cshtml" />
+    <Content Include="Views\FactuurRegel\Edit.cshtml" />
+    <Content Include="Views\FactuurRegel\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

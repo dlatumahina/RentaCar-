@@ -37,7 +37,6 @@ namespace RentaCar.Models
         public virtual DbSet<factuurregel> factuurregel { get; set; }
         public virtual DbSet<klant> klant { get; set; }
         public virtual DbSet<medewerker> medewerker { get; set; }
-        public virtual DbSet<database_firewall_rules> database_firewall_rules { get; set; }
     
         public virtual int AddOrder(string oRDERID, Nullable<System.DateTime> oRDERDATE, string eMPLOYEEID, string cUSTOMERID)
         {

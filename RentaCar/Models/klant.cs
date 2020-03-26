@@ -14,12 +14,6 @@ namespace RentaCar.Models
     
     public partial class klant
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public klant()
-        {
-            this.factuur = new HashSet<factuur>();
-        }
-    
         public string klantcode { get; set; }
         public string voorletters { get; set; }
         public string tussenvoegsels { get; set; }
@@ -32,8 +26,6 @@ namespace RentaCar.Models
         public string medewerker { get; set; }
         public string naam { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<factuur> factuur { get; set; }
         public virtual medewerker medewerker1 { get; set; }
     }
 }
